@@ -1,8 +1,8 @@
 /*
  * Program: GetSetBaggers.java
  * Student: Lydia Frame 
- * Purpose: create a program that illustrate the use of public and private access modifiers and illustrates Encapsulation. 
- * This Program will create a bagger class. 
+ * Purpose: create an application that demonstrates the use of programmer designed classes. 
+ * Using constructors, setters and getter methods. 
  * You will impute the bagger name, bagger start time, bagger end time, is bagger a minor, bagger break time. Using military time.
 */
 
@@ -16,7 +16,7 @@ public class TestBaggers {
 		Scanner input = new Scanner(System.in);
 
         // Create bagger object
-        Baggers bagger1 = new Baggers(null, true, 0, 0, 0);
+        Baggers bagger1 = new Baggers();
         //Set values for bagger 1 
         bagger1.setName("Lydia"); 
         bagger1.setIsMinor(false);
@@ -33,17 +33,31 @@ public class TestBaggers {
         // Space between objects
         System.out.println();
 
-        // New bagger object
-        Baggers bagger2 = new Baggers(null, true, 0, 0, 0);
+        // New bagger object 2
+        Baggers bagger2 = new Baggers();
+        // Get defult values for new bagger object
         System.out.println("Bagger name: " + bagger2.getName());
         System.out.println("Is bagger a minor: " + bagger2.getIsMinor());
         System.out.println("Bagger start time: " + bagger2.getStartTime());
+        System.out.println("Bagger end time: " + bagger2.getEndTime());
         System.out.println("Bagger break time: " + bagger2.getBreakTime());
 
         // Space
         System.out.println();
 
-        // Print out number og baggers
+        // New bagger object 3
+        Baggers bagger3 = new Baggers("Mike", false, 6, 14, 10);
+        // Get values set in constructor
+        System.out.println("Bagger name: " + bagger3.getName());
+        System.out.println("Is bagger a minor: " + bagger3.getIsMinor());
+        System.out.println("Bagger start time: " + bagger3.getStartTime());
+        System.out.println("Bagger end time: " + bagger3.getEndTime());
+        System.out.println("Bagger break time: " + bagger3.getBreakTime());
+
+        // Space
+        System.out.println();
+
+        // Print out number of baggers
         System.out.println("Total number of baggers: " + Baggers.totalBaggers);
         
         // Close the scanner to prevent resource leaks

@@ -15,7 +15,20 @@
     // Static variable to count total number of Bagger instances
     public static int totalBaggers;
 
-    // Constructor
+    // Constructor with defult values
+    Baggers(){
+
+        this.name = "name";
+        this.IsMinor = true;
+        this.StartTime = 0;
+        this.EndTime = 0;
+        this.BreakTime = 0;
+
+        // Increment the total number of baggers whenever a new object is created
+        totalBaggers++;
+    }
+
+    // Constructor that taks in values
     Baggers(String name, boolean IsMinor, int StartTime, int EndTime, int BreakTime){
 
         this.setName(name);
@@ -33,6 +46,7 @@
         return name; 
     }
 
+    // get method that changes true/fals to yes/no;
     public String getIsMinor(){
         return IsMinor ? "Yes" : "No";
     }
